@@ -27,7 +27,7 @@ class circle extends abstacttest {
 		rectange(int c, float d)
 		{super(c,d);}
 		void draw() {
-			System.out.println("this implement absract");
+			System.out.println("this implement all for git repository");
 			
 		};
 

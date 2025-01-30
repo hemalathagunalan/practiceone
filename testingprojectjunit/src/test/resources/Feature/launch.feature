@@ -23,7 +23,7 @@ Feature: Title of your feature
   @Pageload
   Scenario: Opening flight booking webpage
     Given The flight booking webpage opened
-    And Login promt has been
+    And Login promt has been opened
     When pushnotification prompt has been dismissed
     And Login prompt has been dismissed
     Then The trip modes are accessible

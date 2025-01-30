@@ -1,15 +1,37 @@
 package utility;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
 public class Actionclass {
-	public static Boolean click(String name,int obt)
+	
+	public static Logger logger=LogManager.getLogger();
+	
+	public boolean is_displayed(WebDriver driver,WebElement element)
 	{
-		Boolean boo = false;
-		if(name.isEmpty()&obt==10)
+		try{
+			element.isDisplayed();
+			return true;
+		}catch(Exception e)
 		{
-			boo=true;
+			logger.info(e);
+			return false;
 		}
-		return boo;
 	}
 	
+	public boolean click(WebDriver driver,WebElement element)
+	{
+	try{
+		element.click();
+		return true;
+	}catch(Exception e)
+	{
+		logger.info(e);
+		return false;
+	}
+	}
 	
 }

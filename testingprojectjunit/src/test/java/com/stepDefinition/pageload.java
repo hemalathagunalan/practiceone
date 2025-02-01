@@ -11,17 +11,18 @@ import io.cucumber.java.en.When;
 import testingprojectjunit.dashboardobject;
 
 public class pageload {
-	WebDriver driver;
-	
+	public static WebDriver driver=runcucks.getDriver();
 	dashboardobject dashbrd=new dashboardobject(driver);
 @Test
 
 @Given("The flight booking webpage opened")
 public void the_flight_booking_webpage_opened() {
+	 System.out.println("came for driver");
     driver.get("https://www.goibibo.com/");
+    System.out.println("came");
 }
 
-
+//git push --set-upstream main browsersetup
 
 @Given("Login promt has been displayed")
 public void login_promt_has_been() {

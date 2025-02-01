@@ -13,7 +13,7 @@ import utility.Actionclass;
 public class dashboardobject extends Actionclass {
 
 	
-	private static Logger logger=LogManager.getLogger(Main.class);
+	private static Logger logger=LogManager.getLogger();
 	
 @FindBy (css="button#deny.button.close")
 //button#deny.button.close >div.wrapper>div.button-group-custom.clearfix>#allow"
@@ -22,9 +22,12 @@ WebElement Pushpromt_denybutton;
 @FindBy (xpath="span.logSprite.icClose")
 WebElement Login_closebutton;
 
-public WebDriver driver;
+private WebDriver driver;
 
-public dashboardobject(WebDriver driver.getDriver){
+
+
+public dashboardobject(WebDriver driver){
+	logger.error("consturcot invoked successfully");
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
 }

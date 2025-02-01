@@ -5,18 +5,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.Before;
 public class runcucks {
-	private WebDriver driver;
+	private static WebDriver driver;
 @Before
-public void driverinit()
+public static WebDriver driverinit()
 {
-setDriver(new ChromeDriver());
-
-}
-public WebDriver getDriver() {
+	if(driver==null) {
+System.out.println("came for driver init");
+driver = new ChromeDriver();
+System.out.println("came for driver init a");
+	}
 	return driver;
 }
-public void setDriver(WebDriver driver) {
-	this.driver = driver;
+public static WebDriver getDriver() {
+	System.out.println("came for driver init b");
+	return driverinit();
 }
+
 	
 }

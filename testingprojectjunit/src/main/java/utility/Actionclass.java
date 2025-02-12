@@ -14,6 +14,7 @@ public class Actionclass {
 	{
 		try{
 			element.isDisplayed();
+			logger.info("elements are displayed");
 			return true;
 		}catch(Exception e)
 		{

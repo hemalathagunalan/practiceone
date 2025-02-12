@@ -18,13 +18,17 @@ public class pageload {
 @Given("The flight booking webpage opened")
 public void the_flight_booking_webpage_opened() {
 	 System.out.println("came for driver");
-    driver.get("https://www.goibibo.com/");
-    System.out.println("came");
+//    driver.get("https://www.goibibo.com/");
+//    System.out.println("came");
+    
+    
+    driver.get("https://www.google.com");
+    dashbrd.Search("Selenium Automation");
 }
 
 //git push --set-upstream main browsersetup
 
-@Given("Login promt has been displayed")
+@Given("Login promt has been opened")
 public void login_promt_has_been() {
 	if(dashbrd.is_displayed())
 		System.out.println("Pageloaded successfully");

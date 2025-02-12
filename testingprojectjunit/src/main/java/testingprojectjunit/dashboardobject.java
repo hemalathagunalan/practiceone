@@ -19,6 +19,14 @@ public class dashboardobject extends Actionclass {
 //button#deny.button.close >div.wrapper>div.button-group-custom.clearfix>#allow"
 WebElement Pushpromt_denybutton;
 
+@FindBy (css="div.vQ43Ie")
+WebElement promt;
+
+@FindBy (css="button.M6CB1c.rr4y5c")
+WebElement signout;
+@FindBy (className="//textarea[@id='APjFqb']")
+WebElement search;
+
 @FindBy (xpath="span.logSprite.icClose")
 WebElement Login_closebutton;
 
@@ -42,6 +50,20 @@ return click(driver,Pushpromt_denybutton);
 public boolean Login_button_click()
 {
 return click(driver,Login_closebutton);
+}
+public void Search(String data)
+
+{
+	try {
+		driver.wait(5000);
+		signout.click();
+		search.sendKeys(data);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
 }
 }
 
